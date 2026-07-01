@@ -5,9 +5,9 @@ import Voo from './models/Voo.js';
 import JatoExecutivo from './models/Voorapido.js';
 import VooCarga from './models/VooCarga.js';
 
-// ==========================================
+// =========================================
 // 2. INICIALIZAÇÃO DOS OBJETOS
-// ==========================================
+// =========================================
 const meuVoo = new Voo('JS1024', 'São Paulo', 'Tóquio', '14:30');
 const meuJato = new JatoExecutivo('JT-001', 'Rio', 'Nova York');
 const meuCargueiro = new VooCarga('CG-999', 'Manaus', 'Miami', 50000);
