@@ -1,0 +1,117 @@
+/* Estilo geral da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%); /* Fundo mais moderno */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Organiza os painéis lado a lado ou em colunas se a tela for pequena */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os painéis pulem de linha se faltar espaço */
+    gap: 30px; /* Espaçamento entre os painéis */
+    justify-content: center;
+    max-width: 1200px;
+}
+
+/* Estilo dos cards (painéis) */
+.painel {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px; /* Bordas mais redondinhas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra mais suave e profunda */
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse por cima do painel */
+.painel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+h1, h2 {
+    color: #01579b;
+    margin-top: 0;
+}
+
+img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#info-voo p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.destaque {
+    font-size: 1.2em;
+    padding-top: 10px;
+    border-top: 1px solid #eee; /* Linha separadora sutil */
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 0.95em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 100%; /* Botões ocupando a largura toda fica mais moderno */
+}
+
+button:hover {
+    background-color: #01579b;
+}
+
+button:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Organiza os botões dentro dos controles */
+.controles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* Estilo para o campo de digitar (input) do cargueiro */
+input[type="number"] {
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #b2ebf2;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #0277bd;
+}
+
+/* Classes para animar o avião e as cores dos status */
+.voando {
+    transform: translateY(-20px) rotate(-10deg);
+    transition: transform 1s ease;
+}
+
+.status-padrao { color: #0277bd; }
+.status-voando { color: #d32f2f; font-weight: bold; }
+.status-pousado { color: #388e3c; font-weight: bold; }
